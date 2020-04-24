@@ -42,7 +42,8 @@ fi
 
 function password(){
 rule1="[a-zA-Z0-9]{8,}"
-if [[ $password =~ $rule1 ]]
+rule2="[a-zA-Z0-9][A-Z][a-zA-Z0-9]*"
+if [[ $password =~ $rule1 && $password =~ $rule2 ]]
 then
 	echo Valid
 else
