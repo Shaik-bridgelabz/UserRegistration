@@ -19,7 +19,19 @@ else
 fi
 }
 
+function email(){
+pat="^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$"
+if [[ $email =~ $pat ]]
+then
+        echo valid
+else
+        echo notvalid
+fi
+}
+
 read -p "Enter First Name: " fname
 firstName
 read -p "Enter Last Name: " lname
 lastName
+read -p "Enter ur Email: " email
+email
