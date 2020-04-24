@@ -1,4 +1,5 @@
 #!/bin/bash -x
+
 function firstName() {
 pat="^[A-Z]+[a-zA-Z]{2,}$"
 if [[ $fname =~ $pat ]]
@@ -33,11 +34,22 @@ function mobile(){
 pat="^[0-9]{2}[ ][0-9]{10}$"
 if [[ $mobile =~ $pat ]]
 then
-echo Valid
+	echo Valid
 else
-echo Not Valid
+	echo Not Valid
 fi
 }
+
+function password(){
+rule1="[a-zA-Z0-9]{8,}"
+if [[ $password =~ $rule1 ]]
+then
+	echo Valid
+else
+	echo Not valid
+fi
+}
+
 read -p "Enter First Name: " fname
 firstName
 read -p "Enter Last Name: " lname
@@ -46,3 +58,5 @@ read -p "Enter ur Email: " email
 email
 read -p "Enter ur Mobile Number : " mobile
 mobile
+read -p "Enter ur Password : " password
+password
