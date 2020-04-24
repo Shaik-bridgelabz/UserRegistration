@@ -29,9 +29,20 @@ else
 fi
 }
 
+function mobile(){
+pat="^[0-9]{2}[ ][0-9]{10}$"
+if [[ $mobile =~ $pat ]]
+then
+echo Valid
+else
+echo Not Valid
+fi
+}
 read -p "Enter First Name: " fname
 firstName
 read -p "Enter Last Name: " lname
 lastName
 read -p "Enter ur Email: " email
 email
+read -p "Enter ur Mobile Number : " mobile
+mobile
