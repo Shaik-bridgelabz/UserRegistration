@@ -1,6 +1,6 @@
 #!/bin/bash -x
 function firstName() {
-pat="^[A-Z]+[a-zA-Z]{2,}$"
+pat="^[A-Z][a-zA-Z]{3,}$"
 if [[ $fname =~ $pat ]]
 then
 	echo Valid
@@ -10,7 +10,7 @@ fi
 }
 
 function lastName() {
-pat="^[A-Z]+[a-zA-Z]{2,}$"
+pat="^[A-Z][a-zA-Z]{3,}$"
 if [[ $lname =~ $pat ]]
 then
         echo Valid
