@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 function firstName() {
-pat="^[A-Z]+[a-zA-Z]{2,}$"
+pat="^[A-Z][a-z]{3,}$"
 if [[ $fname =~ $pat ]]
 then
 	echo Valid
@@ -11,7 +11,7 @@ fi
 }
 
 function lastName() {
-pat="^[A-Z]+[a-zA-Z]{2,}$"
+pat="^[A-Z][a-z]{3,}$"
 if [[ $lname =~ $pat ]]
 then
         echo Valid
@@ -21,7 +21,7 @@ fi
 }
 
 function email(){
-pat="^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$"
+pat="^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})?$"
 if [[ $email =~ $pat ]]
 then
         echo valid
