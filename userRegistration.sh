@@ -21,7 +21,7 @@ fi
 }
 
 function email(){
-pat="^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})?$"
+pat="^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}+([.][a-zA-Z]{2})?$"
 if [[ $email =~ $pat ]]
 then
         echo valid
